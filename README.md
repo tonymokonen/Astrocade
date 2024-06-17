@@ -4,7 +4,7 @@
 **sokoban.txt**<br>
 Source code for 4K version of Sokoban for Blue Ram BASIC<br>
 <br>
-#sokoban.wav<br>
+**sokoban.wav**<br>
 2000 baud file for 4K version of Sokoban for Blue Ram BASIC<br>
 Use<br>
 :INPUT ;RUN<br>
