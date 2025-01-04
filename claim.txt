@@ -1,0 +1,63 @@
+10 clear ;Z=10;K=20;FC=252;BC=119;&(9)=255;CX=-30;CY=K;print "CLAIM JUMPING
+20 CX=-45;CY=-Z;input "NUMBER OF PLAYERS "C;if (C>4)+(C<2)goto K
+30 clear ;D=0;E=0;F=0;G=0;Q=0;P=1;N=90;S=370;R=420;T=470;U=480
+40 for A=-69to 71step K
+50 for B=-39to 41step K
+60 box A,B,2,2,1;MU=90
+70 next B;next A
+80 X=1;Y=1;goto 360
+90 V=X;W=Y;H=0;J=15+P
+100 if &(J)=1Y=Y+K
+110 if &(J)=2Y=Y-K
+120 if &(J)=4X=X-K
+130 if &(J)=5Y=Y+Z;X=X-Z
+140 if &(J)=6Y=Y-Z;X=X-Z
+150 if &(J)=8X=X+K
+160 if &(J)=9Y=Y+Z;X=X+Z
+170 if &(J)=10Y=Y-Z;X=X+Z
+180 box V,W,2,2,2;if (V#X)+(W#Y)MU=83
+190 if (X<-69)+(X>71)+(Y<-39)+(Y>41)goto 80
+200 box X,Y,2,2,1;for A=1to 30
+210 if TR(P)L=X;M=Y;goto 230
+220 next A;goto N
+230 A=(Y+39)div 20;if RM goto 260
+240 if PX(X+2,Y)=0box X,Y,K,2,1;MU=84;goto 280
+250 goto N
+260 if PX(X,Y+2)=0box X,Y,2,K,1;MU=68;goto 310
+270 goto N
+280 if PX(X+Z,Y+2)if PX(X-Z,Y+2)if PX(X+2,Y+K)M=Y+Z;gosub R
+290 if PX(X+Z,Y-2)if PX(X-Z,Y-2)if PX(X+2,Y-K)M=Y-Z;gosub R
+300 goto 330
+310 if PX(X-K,Y+2)if PX(X-2,Y+Z)if PX(X-2,Y-Z)L=X-Z;gosub R
+320 if PX(X+K,Y+2)if PX(X+2,Y+Z)if PX(X+2,Y-Z)L=X+Z;gosub R
+330 if Q=28goto 500
+340 if H=1goto N
+350 P=P+1;if P>C P=1
+360 CX=-74;CY=1;TV=P+48;goto N
+370 MU=77;MU=78;gosub Pmul Z+370;H=1;Q=Q+1;return 
+380 D=D+1;@(1)=D;return 
+390 E=E+1;@(2)=E;return 
+400 F=F+1;@(3)=F;return 
+410 G=G+1;@(4)=G;return 
+420 box L,M,14,14,1;gosub Pmul Z+420;gosub S;return 
+430 gosub T;return 
+440 gosub U;return 
+450 gosub T;gosub U;return 
+460 gosub U;gosub 490;return 
+470 box L,M,2,2,2;return 
+480 box L-4,M+4,2,2,2;box L+4,M-4,2,2,2;return 
+490 box L-4,M-4,2,2,2;box L+4,M+4,2,2,2;return 
+500 I=Z;for A=Kto 1step -1
+510 for B=1to C;if @(B)=A@(I)=B;I=I+Z
+520 next B;next A
+530 CY=25;for A=Zto Cmul Z step Z;CX=-55;gosub A+590;gosub @(A)mul Z+530;CY=CY-6;next A;goto 580
+540 print "#1 SCORED",#3,D," ";return 
+550 print "#2 SCORED",#3,E," ";return 
+560 print "#3 SCORED",#3,F," ";return 
+570 print "#4 SCORED",#3,G," ";return 
+580 for A=1to C;if TR(A)goto Z
+590 next A;goto 580
+600 print " 1ST - ",;return 
+610 print " 2ND - ",;return 
+620 print " 3RD - ",;return 
+630 print " 4TH - ",;return 
